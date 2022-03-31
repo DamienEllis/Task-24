@@ -1,0 +1,149 @@
+<!--
+    Author:           Damien Ellis
+    Date completed:   2022/03/24
+    Due date:         2022/03/24
+    Task completed:   YES
+    Task description: my developer portfolio save for later page
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Set meta data details-->
+        <title>Save For Later</title>
+
+        <!--include the styling-->
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/SaveforLater.css">
+
+        <!--ajax/jquery functionality-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="JS/SavedforLater.js"></script>
+    </head>
+    <body>
+        
+        <!--Spotify's play music section to the top right of the page-->
+        <div style="position:absolute; top:0; right:0;">
+
+            <!--Iframe for spotify-->
+            <div id="Spotify" style="visibility: hidden;">
+                <iframe id="spotifyControl"
+                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator"
+                    width="100%" height="80" frameBorder="0" autoplay=1 allow="autoplay;">
+                </iframe>
+            </div>
+
+            <!-- play music button -->
+            <div style="margin-top: -80px;" onclick="PlayMusic();">
+                <table id="Playmusic">
+                    <tr>
+                        <td>
+                            <img width="50px" height="50px" src="https://img.icons8.com/plasticine/100/000000/spotify--v1.png"/>
+                        </td>
+                        <td>
+                            <a id="MusicText" style="color:white;">Play Music</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="s-layout__sidebar">
+            <a class="s-sidebar__trigger" href="#0">
+                <i class="fa fa-bars"></i>
+            </a>
+            <nav class="s-sidebar__nav">
+                <ul>
+                    <li>
+                        <a class="s-sidebar__nav-link sidenav" href="index.html">
+                        <i class="fa fa-user"></i><em>Home</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="s-sidebar__nav-link  sidenav" href="aboutme.html">
+                            <i class="fa fa-home"></i><em>About</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="s-sidebar__nav-link sidenav" href="index.html#My_Skills">
+                        <i class="fa fa-user"></i><em>My SKills</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="s-sidebar__nav-link sidenav" href="contactme.html">
+                            <i class="fa fa-camera"></i><em>Contact Me</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="s-sidebar__nav-link active sidenav" href="SaveForLater.html">
+                            <i class="fa fa-camera"></i><em>Saved for later</em>
+                        </a>
+                    </li>
+                    <li>
+                        <table style="margin:30px;" width="75%">
+                            <tr>
+                                <td align="left"><a href="https://www.linkedin.com/in/damien-ellis-0225121b3/" target="_blank"><img width="50px" height="50px" src="https://img.icons8.com/doodle/48/000000/linkedin--v2.png"/></a></td>
+                                <td align="right"><a href="https://www.pol360.co.za/" target="_blank"><img width="50px" height="50px" src="https://img.icons8.com/external-becris-lineal-color-becris/64/000000/external-work-finance-taxation-becris-lineal-color-becris.png"/></a></td>
+                            </tr>
+                            <tr>
+                                <td align="left"><u>LinkedIn</u></td>
+                                <td align="right"><u>Business</u></td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--intro text-->
+        <table style="width:80%; height:100%;">
+            <tr>
+                <td>
+                    <table style="margin-left:20%;" cellspacing="0" >
+                        <tr>
+                            <td><h1 class="buttonD" data-content="S">S</h1></td>
+                            <td><h1 class="buttonD" data-content="a">a</h1></td>
+                            <td><h1 class="buttonD" data-content="v">v</h1></td>
+                            <td><h1 class="buttonD" data-content="e">e</h1></td>
+                            <td><h1 class="buttonD" data-content="d">d</h1></td>
+                        </tr>
+                        <tr>
+                            <td><h1 class="buttonD" data-content="F">F</h1></td>
+                            <td><h1  class="buttonD" data-content="o">o</h1></td>
+                            <td><h1  class="buttonD" data-content="r">r</h1></td>
+                        </tr>
+                        <tr>
+                            <td><h1 class="buttonD" data-content="L">L</h1></td>
+                            <td><h1  class="buttonD" data-content="a">a</h1></td>
+                            <td><h1  class="buttonD" data-content="t">t</h1></td>
+                            <td><h1  class="buttonD" data-content="e">e</h1></td>
+                            <td><h1  class="buttonD" data-content="r">r</h1></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:20px;"></td>
+            </tr>
+            <tr>
+                <td>
+                    <table id="Saved" style="margin-left:10%;" >
+                        <tbody  id="MySavedContent">
+                            <th align="left">Contents</th>
+                            <th align="right">
+                                Like
+                            </th>
+                            <th>
+                                Comments
+                            </th>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+

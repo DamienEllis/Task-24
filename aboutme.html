@@ -1,0 +1,230 @@
+<!--
+    Author:           Damien Ellis
+    Date completed:   2022/03/24
+    Due date:         2022/03/24
+    Task completed:   YES
+    Task description: my developer portfolio about me page
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Set meta data details-->
+        <title>About Me</title>
+
+        <!--include the styling-->
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/aboutme.css">
+
+        <!--ajax/jquery functionality-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="JS/aboutme.js"></script>
+    </head>
+
+    <body>
+        
+        <!--Spotify's play music section to the top right of the page-->
+        <div style="position:absolute; top:0; right:0;">
+
+            <!--Iframe for spotify-->
+            <div id="Spotify" style="visibility: hidden;">
+                <iframe id="spotifyControl"
+                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator"
+                    width="100%" height="80" frameBorder="0">
+                </iframe>
+            </div>
+        
+            <!-- play music button -->
+            <div style="margin-top: -80px;" onclick="PlayMusic();">
+                <table id="Playmusic">
+                    <tr>
+                        <td>
+                            <img style="width:50px; height:50px;" alt="spotify logo" src="https://img.icons8.com/plasticine/100/000000/spotify--v1.png"/>
+                        </td>
+                        <td>
+                            <a id="MusicText" style="color:white;">Play Music</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="s-layout__sidebar">
+            <a class="s-sidebar__trigger" href="#0">
+                <i class="fa fa-bars"></i>
+            </a>
+  
+            <nav class="s-sidebar__nav">
+                <ul>
+                    <li>
+                        <a class="s-sidebar__nav-link sidenav" href="index.html">
+                        <i class="fa fa-user"></i><em>Home</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="s-sidebar__nav-link active sidenav" href="#0">
+                            <i class="fa fa-home"></i><em>About</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="s-sidebar__nav-link sidenav" href="index.html#My_Skills">
+                        <i class="fa fa-user"></i><em>My SKills</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="s-sidebar__nav-link sidenav" href="contactme.html">
+                            <i class="fa fa-camera"></i><em>Contact Me</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="s-sidebar__nav-link sidenav" href="SaveForLater.html">
+                            <i class="fa fa-camera"></i><em>Saved for later</em>
+                        </a>
+                    </li>
+                    <li>
+                        <table style="margin:30px;" width="75%">
+                            <tr>
+                                <td align="left"><a href="https://www.linkedin.com/in/damien-ellis-0225121b3/" target="_blank"><img style="width:50px; height:50px;" alt="LinkedIn Logo" src="https://img.icons8.com/doodle/48/000000/linkedin--v2.png"/></a></td>
+                                <td align="right"><a href="https://www.pol360.co.za/" target="_blank"><img style="width:50px; height:50px;" alt="Suit case" src="https://img.icons8.com/external-becris-lineal-color-becris/64/000000/external-work-finance-taxation-becris-lineal-color-becris.png"/></a></td>
+                            </tr>
+                            <tr>
+                                <td align="left"><u>LinkedIn</u></td>
+                                <td align="right"><u>Business</u></td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--intro text-->
+        <table style="width:80%; height:100%;">
+            <tr>
+                <td>
+                    <table style="margin-left:20%;" cellspacing="0" >
+                        <tr>
+                            <td><h1 class="buttonD" data-content="A">A</h1></td>
+                            <td><h1 class="buttonD" data-content="b">b</h1></td>
+                            <td><h1 class="buttonD" data-content="o">o</h1></td>
+                            <td><h1 class="buttonD" data-content="u">u</h1></td>
+                            <td><h1 class="buttonD" data-content="t">t</h1></td>
+                        </tr>
+                        <tr>
+                            <td><h1 class="buttonD" data-content="M">M</h1></td>
+                            <td><h1  class="buttonD" data-content="e">e</h1></td>
+                            <td><h1  class="buttonD" data-content="!">!</h1></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:20px;"></td>
+            </tr>
+            <tr>
+                <td>
+                    <table style="margin-left:1%;" >
+                        <tr>
+                            <td align="left" width="50%">
+                                <!--hobbies section-->
+                                <table style="margin-left:20%; margin-bottom:20%;" >
+                                    <tr>
+                                        <td>
+                                            <h1 id="My_Skills">
+                                                Hobbies
+                                            </h1>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><h2>Crypto currency trading</h2></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h4>My favourite cryptos are:</h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i class="material-icons">&#xe161;</i>
+                                            <ol id="FavouriteCrypto" onclick="SaveForLater(this.id);">
+                                                
+                                                <li>Dogecoin</li>
+                                                <li>Ethereum</li>
+                                                <li>Cardano</li>
+                                                <li>TKing</li>
+                                                <li>Blinu</li>
+                                            </ol>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table width="100%">
+                                                <tr>
+                                                    <td id="img1">
+                                                        <i class="material-icons">&#xe161;</i><img onclick="SaveForLater('img1');" style="width:150px; height:150px;" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d0/Dogecoin_Logo.png/225px-Dogecoin_Logo.png" alt="Dogecoin logo" />
+                                                    </td>
+                                                    <td id="img2">
+                                                        <i class="material-icons">&#xe161;</i><img onclick="SaveForLater('img2');" style="width:150px; height:150px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1257px-Ethereum_logo_2014.svg.png" alt="Ethereum Logo" />
+                                                    </td>
+                                                    <td id="img3">
+                                                        <i class="material-icons">&#xe161;</i><img onclick="SaveForLater('img3');" style="width:150px; height:150px;" src="data:image/jpeg;base64,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" alt="Cardano logo"/>
+                                                    </td>
+                                                    <td id="img4">
+                                                        <i class="material-icons">&#xe161;</i><img onclick="SaveForLater('img4');" style="width:150px; height:150px;" src="https://s2.coinmarketcap.com/static/img/coins/64x64/9854.png" alt="Tking"/>
+                                                    </td>
+                                                    <td id="img5">
+                                                        <i class="material-icons">&#xe161;</i><img onclick="SaveForLater('img5');" style="width:150px; height:150px;" src="https://s2.coinmarketcap.com/static/img/coins/64x64/17701.png" alt="Baby lambo inu"/>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><h2 id="FlyingHeader" onclick="SaveForLater(this.id);">Flying<i class="material-icons">&#xe161;</i></h2></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="FlyingSubHeader" onclick="SaveForLater(this.id);">
+                                            <i class="material-icons">&#xe161;</i>
+                                            <h4>
+                                                Flying aeroplanes has always been in my blood, 
+                                                and at the age of 12 i had landed my first aircraft.
+                                                <br>
+                                                Watch me land in action below
+                                            </h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            
+                                            <!--flying video-->
+                                            <iframe id="MeFlying" width="560" height="315"
+                                                src="https://eehomes.co.za/images/IMG_0257.mp4"
+                                                title="Me Landing"
+                                            >
+                                            </iframe>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h2 style="margin-top:100px;">programming</h2>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <!--Laptop section-->
+                                            <div  style="margin-left:50px;" class="laptop">
+                                                <div class="content">
+                                                    <iframe id="fff" src="https://www.pol360.co.za/" style="width:96%; border:none; height:96%" ></iframe>
+                                                </div>
+                                            </div>
+                                        </td> 
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

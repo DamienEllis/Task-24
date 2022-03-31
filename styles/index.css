@@ -1,0 +1,452 @@
+/*
+    Author:           Damien Ellis
+    Date completed:   2022/03/24
+    Due date:         2022/03/24
+    Task completed:   YES
+    Task description: my developer portfolio index page
+*/
+@import url("https://fonts.googleapis.com/css?family=Barlow:800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*base body styling*/
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #202020;
+}
+
+
+#main {
+  -webkit-transition: .5s;
+  transition: .5s;
+  padding: 16px;
+}
+
+/*basic styling for h1 elements*/
+h1 {
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+  display: inline-block;
+  font-size: 6em;
+  margin: 0;
+  padding: 0;
+  color: #06c4a8;
+  font-weight: 800;
+  overflow: hidden;
+  -webkit-transition: -webkit-clip-path 275ms ease;
+  transition: -webkit-clip-path 275ms ease;
+  transition: clip-path 275ms ease;
+  transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+}
+
+/*set h1 clip paths before hover*/
+h1:hover::before {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/*set tje transition of the h1 element*/
+h1::before {
+  position: absolute;
+  content: attr(data-content);
+  color: #06c4a8;
+  -webkit-clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+          clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+  -webkit-transition: -webkit-clip-path 275ms ease;
+  transition: -webkit-clip-path 275ms ease;
+  transition: clip-path 275ms ease;
+  transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+}
+
+/*h2 basic styling*/
+h2 {
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+  display: inline-block;
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
+  color: #06c4a8;
+  font-weight: 800;
+  overflow: hidden;
+  -webkit-transition: -webkit-clip-path 275ms ease;
+  transition: -webkit-clip-path 275ms ease;
+  transition: clip-path 275ms ease;
+  transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+}
+
+/*h2 styling before hover*/
+h2:hover::before {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+h2::before {
+  position: absolute;
+  content: attr(data-content);
+  color: #06c4a8;
+  -webkit-clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+          clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+  -webkit-transition: -webkit-clip-path 275ms ease;
+  transition: -webkit-clip-path 275ms ease;
+  transition: clip-path 275ms ease;
+  transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+}
+
+/*h3 base styling*/
+h3 {
+  font-family: 'Oswald', sans-serif;
+  position: relative;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-weight: 800;
+  overflow: hidden;
+  -webkit-transition: -webkit-clip-path 275ms ease;
+  transition: -webkit-clip-path 275ms ease;
+  transition: clip-path 275ms ease;
+  transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+}
+
+/*h3 clip paths*/
+h3:hover::before {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/*h3 styling before */
+h3::before {
+  position: absolute;
+  content: attr(data-content);
+  color: #06c4a8;
+  -webkit-clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+          clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+  -webkit-transition: -webkit-clip-path 275ms ease;
+  transition: -webkit-clip-path 275ms ease;
+  transition: clip-path 275ms ease;
+  transition: clip-path 275ms ease, -webkit-clip-path 275ms ease;
+}
+
+/* Primary Styles */
+body {
+  font-family: sans-serif;
+  font-size: 1em;
+  color: #333;
+}
+
+/*h1  for the side nav*/
+h1.sidenav {
+  font-size: 1.4em;
+}
+
+em {
+  font-style: normal;
+}
+
+/*base  styling for a elements in the sidenav*/
+a.sidenav {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Layout */
+.s-layout {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/*lay the content out for the side bar*/
+.s-layout__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+/* Sidebar */
+.s-sidebar__trigger {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  background: #192b3c;
+}
+
+.s-sidebar__trigger > i {
+  display: inline-block;
+  margin: 1.5em 0 0 1.5em;
+  color: #f07ab0;
+}
+
+/*side bar navs  styling*/
+.s-sidebar__nav {
+  position: fixed;
+  top: 0;
+  left: -15em;
+  overflow: hidden;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  width: 15em;
+  height: 100%;
+  background: #272727;
+  color: white;
+}
+
+.s-sidebar__nav:hover,
+.s-sidebar__nav:focus,
+.s-sidebar__trigger:focus + .s-sidebar__nav,
+.s-sidebar__trigger:hover + .s-sidebar__nav {
+  left: 0;
+}
+
+/*set ul elements*/
+.s-sidebar__nav ul {
+  position: absolute;
+  top: 4em;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 15em;
+}
+
+/*li elements full width*/
+.s-sidebar__nav ul li {
+  width: 100%;
+}
+
+.s-sidebar__nav-link {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 4em;
+}
+
+.s-sidebar__nav-link {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 4em;
+}
+
+.s-sidebar__nav-link em {
+  position: absolute;
+  top: 50%;
+  left: 4em;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/*change color on hover*/
+.s-sidebar__nav-link:hover {
+  background: #8ea2b5;
+}
+
+/*set the active class*/
+.active {
+  background: #4d6276;
+}
+
+.s-sidebar__nav-link > i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+}
+
+.s-sidebar__nav-link > i::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/* Mobile First */
+@media (min-width: 42em) {
+  .s-layout__content {
+    margin-left: 4em;
+  }
+  /* Sidebar */
+  .s-sidebar__trigger {
+    width: 4em;
+  }
+  .s-sidebar__nav {
+    width: 4em;
+    left: 0;
+  }
+  .s-sidebar__nav:hover,
+  .s-sidebar__nav:focus,
+  .s-sidebar__trigger:hover + .s-sidebar__nav,
+  .s-sidebar__trigger:focus + .s-sidebar__nav {
+    width: 15em;
+  }
+}
+
+@media (min-width: 68em) {
+  .s-layout__content {
+    margin-left: 15em;
+  }
+  /* Sidebar */
+  .s-sidebar__trigger {
+    display: none;
+  }
+  .s-sidebar__nav {
+    width: 15em;
+  }
+  .s-sidebar__nav ul {
+    top: 1.3em;
+  }
+}
+
+/*set  the styling for the table*/
+#TableOuter {
+  top: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  position: absolute;
+  top: 0;
+  left: 20%;
+}
+
+#TableOuter tr {
+  padding: 0;
+  margin: 0;
+}
+
+#TableOuter tr td {
+  padding: 0;
+  margin: 0;
+}
+
+/* The laptop with borders */
+.laptop {
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scale(0.6) translate(-50%);
+  /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+  transform: scale(0.6) translate(-50%);
+  /* Scaled down for a better Try-it experience (change to 1 for full scale) */
+  left: 50%;
+  position: absolute;
+  width: 1366px;
+  height: 800px;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: black;
+  border-width: 24px 24px 80px;
+  background-color: black;
+}
+
+/* The keyboard of the laptop */
+.laptop:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1600px;
+  height: 60px;
+  margin: 80px 0 0 -110px;
+  background: black;
+  border-radius: 12px;
+}
+
+/* The top of the keyboard */
+.laptop:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 250px;
+  height: 30px;
+  bottom: -110px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  background: #f1f1f1;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  z-index: 1;
+}
+
+/* The screen (or content) of the device */
+.laptop .content {
+  width: 1366px;
+  height: 800px;
+  overflow: hidden;
+  border: none;
+}
+
+
+/*bounce animation for the letters*/
+.bounce {
+  -webkit-animation: bounce .9s infinite alternate;
+  animation: bounce .9s infinite alternate;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+}
+
+/*svg  styling*/
+svg {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin-top: 33vh;
+}
